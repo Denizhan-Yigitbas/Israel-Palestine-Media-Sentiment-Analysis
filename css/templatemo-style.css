@@ -38,7 +38,7 @@ a:focus {
 }
 
 .tm-section-pad-top {
-  padding-top: 135px;
+  padding-top: 68px;
 }
 
 .tm-text-primary {
@@ -69,12 +69,15 @@ a:focus {
   width: 100%;
   z-index: 1000;
   background-color: transparent;
+  /* background-color: red; */
   transition: all 0.3s ease;
 }
 
 .tm-navbar.scroll {
   background-color: white;
+  /* background-color: green; */
   border-bottom: 1px solid #e9ecef;
+  z-index: 999999;
 }
 
 .navbar-brand {
@@ -577,6 +580,7 @@ p {
 
   .navbar-collapse {
     background-color: rgb(255, 255, 255);
+    /* background-color: red; */
     padding: 10px;
     border-radius: 3px;
   }
@@ -625,3 +629,4 @@ p {
   max-width: 600px;
   display: inline;
 }
+
