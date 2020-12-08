@@ -630,3 +630,49 @@ p {
   display: inline;
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td, th {
+  border: 2px solid darkgray;
+  text-align: left;
+  padding: 8px;
+}
+th {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+table.arrowtable {
+  font-family: arial, sans-serif;
+  border-collapse: separate;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border:2px darkgray solid;
+  border-spacing: 0px 20px;
+}
+
+td.arrowtable, th.arrowtable {
+  border: 0px solid darkgray;
+  text-align: center;
+  padding: 8px;
+}
+th.arrowtable {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+tr.arrowtable:nth-child(even) {
+  background-color: white;
+}
+

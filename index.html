@@ -16,7 +16,7 @@
 
 <body>
   <!-- Hero section -->
-  <section id="hero" class="text-white tm-font-big tm-parallax">
+  <section id="hero" class="text-white tm-font-big ">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
       <div class="container">
@@ -96,6 +96,7 @@
             explore these questions, 4 different new outlets will be analyzed: The New York Times, Fox News,Mondoweiss,
             and HonestReporting.
           </p>
+          <img src="./img/all.jpg" width="90%" style="margin-bottom: 20px;">
         </div>
       </div>
     </div>
@@ -148,8 +149,28 @@
             headlines from each source that were the most relevant for the query "US Embassy move from Tel Aviv to
             Jerusalem". Smaller platforms such as Mondoweiss and HonestReporting do not provide such APIs for this
             reason, the same query was used for these sources, however the most relevant headlines were manually
-            extracted.
+            extracted. The data output file for this step had the following structure:
           </p>
+          <table>
+            <tr>
+              <th>Headline</th>
+              <th>Source</th>
+              <th>Search Query</th>
+            </tr>
+            <tr>
+              <td>
+                <div style="font-style: italic;">[News Headline]</div>
+              </td>
+              <td>
+                <div style="font-style: italic;">[NYT, Fox, Mond, or HR]</div>
+              </td>
+              <td>
+                <div style="font-style: italic;">US Embassy move from Tel Aviv to
+                  Jerusalem</div>
+              </td>
+            </tr>
+          </table>
+          <br><br>
           <h5 style="text-decoration: underline;">Data Cleaning</h5>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
             Lexicon-Based Matching analysis by removing or modifying any irrelevant, duplicated, or incorrect data.
@@ -162,33 +183,83 @@
             prepositions such as “a”, “for”, “but”, “in”, etc. Following this, in order to avoid any additional errors
             in the processing section, we will convert every character of every headline to be coded in UTF-8, allowing
             for data consistency when performing Natural Language Processing for Sentiment Analysis.
-          </p>
+
+          <table class="arrowtable">
+            <tr class="arrowtable">
+              <th class="arrowtable">Original Headline</th>
+              <th class="arrowtable"></th>
+              <th class="arrowtable">Cleaned Headline</th>
+            </tr>
+            <tr class="arrowtable">
+              <td class="arrowtable">
+                <div style="font-style: italic;">Killings in Gaza, New Embassy in Jerusalem, and Peace as Distant as
+                  Ever</div>
+              </td>
+              <td class="arrowtable">
+                <img src="./img/arrow.png" width="70%">
+              </td>
+              <td class="arrowtable">
+                <div style="font-style: italic;">Killings Gaza, New Embassy Jerusalem, Peace Distant Ever</div>
+              </td>
+            </tr>
+          </table>
+          <br><br>
           <h5 style="text-decoration: underline;">Data Processing</h5>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
             Now that the necessary data has been extracted and cleaned, it is ready to undergo the sentiment analysis
             process. The basics of sentiment analysis can be outlined as a five step process:
-            Tokenize the input into component sentences based on punctuation
-            This can be completed with a simple string manipulation algorithm that detects spaces and punctuation and
-            divides them accordingly
-            Tag each token with a part-of-speech using a natural language processing algorithm
-            This can be completed utilizing the NLP algorithms provided by the used library
-            Assign quantitative values to each token by matching them to a word lexicon
-            Each token will be matched with the corresponding word in a word lexicon. Once each token is matched to a
-            quantitative value, a statistical average will be taken for the overall input
-            Output a normalized polarity for the input between -1 and 1
-            In order to compare results, the averages will be normalized to values between -1 and 1
-            Map the polarity of each input to a sentiment
+            <br><br>
+            <b><u>Step 1:</u> </b>Tokenize the input into component sentences based on punctuation. This can be
+            completed with
+            a simple string manipulation algorithm that detects spaces and punctuation and divides them accordingly
+            <br>
+            <b><u>Step 2:</u> </b> Tag each token with a part-of-speech using a natural language processing algorithm.
+            This can
+            be completed utilizing the NLP algorithms provided by the used library
+            <br>
+            <b><u>Step 3:</u> </b>Assign quantitative values to each token by matching them to a word lexicon. Each
+            token will
+            be matched with the corresponding word in a word lexicon. Once each token is matched to a quantitative
+            value, a statistical average will be taken for the overall input
+            <br>
+            <b><u>Step 4:</u> </b>Output a normalized polarity for the input between -1 and 1. In order to compare
+            results, the
+            averages will be normalized to values between -1 and 1
+            <br>
+            <b><u>Step 5:</u> </b>Map the polarity of each input to a sentiment
             Any polarity value greater than 0 equates to positive sentiment. Similarly, any polarity value less than 0
             equates to a negative sentiment. Finally, if the polarity is equal to zero, this implies a neutral
             sentiment.
-
+            <br><br>
             In order to ensure accuracy of the results, the following 3 natural language processing libraries for
             sentiment analysis were used: TextBlob, Vader, and SentimentR. Using 3 different libraries allows for the
             use of 3 different lexicons. In order to make an accurate conclusion, we would expect the results to be
             similar amongst the 3 libraries. While TextBlob and Vader are NLP libraries written in python, SentimentR is
             a library written solely for R software. Various data transformation methods were used in order to combine
             the resulting data processing for all 3 libraries. Once combined, the data is prepared to be analyzed for
-            results.
+            results. The data output file following this data processing had the following structure:
+          <table>
+            <tr>
+              <th>Headline</th>
+              <th>Source</th>
+              <th>Polarity</th>
+              <th>Sentiment</th>
+            </tr>
+            <tr>
+              <td>
+                <div style="font-style: italic;">[News Headline]</div>
+              </td>
+              <td>
+                <div style="font-style: italic;">[NYT, Fox, Mond, or HR]</div>
+              </td>
+              <td>
+                <div style="font-style: italic;">0.5</div>
+              </td>
+              <td>
+                <div style="font-style: italic;">positive</div>
+              </td>
+            </tr>
+          </table>
           </p>
         </div>
       </div>
@@ -212,26 +283,6 @@
             is displayed below:
           </p>
         </div>
-        <!-- <div class="col-lg-6">
-          <img src="img/the-town-01.jpg" alt="Image" class="img-fluid tm-intro-img" />
-        </div>
-        <div class="col-lg-6">
-          <div class="tm-intro-text-container">
-            <h2 class="tm-text-primary mb-4 tm-section-title">Introduction</h2>
-            <p class="mb-4 tm-intro-text">
-              The Town is <strong>simple CSS template</strong> built on Bootstrap v4.1.3
-              and this is a little parallax layout that you can use for your websites.
-            </p>
-            <p class="mb-5 tm-intro-text">
-              Please tell your friends about our site
-              <a rel="nofollow" href="https://templatemo.com">templatemo</a>. Thank you.
-              Curabitur dapibus tristique enim a imperdiet. Etiam
-              tristique sem sed condimentum posuere. </p>
-            <div class="tm-next">
-              <a href="#work" class="tm-intro-text tm-btn-primary">Read More</a>
-            </div>
-          </div>
-        </div> -->
       </div>
 
       <!-- <div class="row tm-section-pad-top">
@@ -271,12 +322,12 @@
           <!-- <i class="fas fa-4x fa-bus text-center tm-icon"></i> -->
           <img src="./img/nyt_title.png" style="width: 100%;">
           <img src="./img/nyt_graph2.png" style="width: 90%;">
-          <h4 class="text-center tm-text-primary mb-4">Curabitur at elit eu risus</h4>
+          <!-- <h4 class="text-center tm-text-primary mb-4">Curabitur at elit eu risus</h4>
           <p>
             Sed ultrices sit amet mi eu malesuada. Cras ultricies gravida
             nisi, ac pellentesque nunc tincidunt quis. Aenean at ornare lacus.
             Duis imperdiet lacus justo.
-          </p>
+          </p> -->
         </div>
 
         <!--FOX-->
@@ -284,12 +335,12 @@
           <!-- <i class="fas fa-4x fa-city text-center tm-icon"></i> -->
           <img src="./img/fox_title.png" style="width: 100%;">
           <img src="./img/fox_graph2.png" style="width: 90%;">
-          <h4 class="text-center tm-text-primary mb-4">Fusce sed nisi sagittis</h4>
+          <!-- <h4 class="text-center tm-text-primary mb-4">Fusce sed nisi sagittis</h4>
           <p>
             Donec vestibulum libero nisl. Curabitur ac orci ac lorem blandit
             volutpat. Sed ac sodales nibh, ut porttitor elit. Sed id dui mi.
             Vestibulum ante ipsum primis in faucibus.
-          </p>
+          </p> -->
         </div>
       </div>
 
@@ -299,12 +350,12 @@
           <!-- <i class="fas fa-4x fa-bus text-center tm-icon"></i> -->
           <img src="./img/mond_title.png" style="width: 100%;">
           <img src="./img/mond_graph2.png" style="width: 100%;">
-          <h4 class="text-center tm-text-primary mb-4">Curabitur at elit eu risus</h4>
+          <!-- <h4 class="text-center tm-text-primary mb-4">Curabitur at elit eu risus</h4>
           <p>
             Sed ultrices sit amet mi eu malesuada. Cras ultricies gravida
             nisi, ac pellentesque nunc tincidunt quis. Aenean at ornare lacus.
             Duis imperdiet lacus justo.
-          </p>
+          </p> -->
         </div>
 
         <!--HONREP-->
@@ -312,12 +363,12 @@
           <!-- <i class="fas fa-4x fa-city text-center tm-icon"></i> -->
           <img src="./img/honrep_title.jpg" width="100%">
           <img src="./img/honrep_graph2.png" style="width: 100%;">
-          <h4 class="text-center tm-text-primary mb-4">Fusce sed nisi sagittis</h4>
+          <!-- <h4 class="text-center tm-text-primary mb-4">Fusce sed nisi sagittis</h4>
           <p>
             Donec vestibulum libero nisl. Curabitur ac orci ac lorem blandit
             volutpat. Sed ac sodales nibh, ut porttitor elit. Sed id dui mi.
             Vestibulum ante ipsum primis in faucibus.
-          </p>
+          </p> -->
         </div>
       </div>
   </section>
@@ -467,13 +518,7 @@
         </div>
       </div>
     </div>
-    <footer class="text-center small tm-footer">
-      <p class="mb-0">
-        Copyright &copy; 2019 Company Name
 
-        - Design: <a rel="nofollow" href="https://templatemo.com" class="tm-footer-link">Template Mo</a>
-      </p>
-    </footer>
   </section>
 
 
