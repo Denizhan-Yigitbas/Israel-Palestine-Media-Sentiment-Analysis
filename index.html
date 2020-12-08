@@ -18,7 +18,7 @@
   <!-- Hero section -->
   <section id="hero" class="text-white tm-font-big ">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+    <nav class="navbar navbar-expand-md tm-navbar" id="tmNav" style="z-index: 100;">
       <div class="container">
         <div class="tm-next">
           <a href="#hero" class="navbar-brand">Denizhan - SOCI 381</a>
@@ -44,7 +44,7 @@
               <a class="nav-link tm-nav-link" href="#results">Results</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="#contact">Contact Us</a>
+              <a class="nav-link tm-nav-link" href="#conclusion">Future</a>
             </li>
           </ul>
         </div>
@@ -56,7 +56,7 @@
       <div class="tm-hero-text-container-inner">
         <h2 class="tm-hero-title">Exploring Sentiment Analysis of News Headlines</h2>
         <p class="tm-hero-subtitle">
-          Special Focus: Moving the US Embassy from Tel Aviv to Jerusalem
+          Moving the US Embassy from Tel Aviv to Jerusalem
           <br />
         <div class="tm-hero-author">By Denizhan Yigitbas </div>
         </p>
@@ -74,27 +74,27 @@
   <section id="question" class="tm-section-pad-top">
     <div class="container tm-container-gallery">
       <div class="row">
-        <div class="text-center col-12">
+        <div class="text-center">
           <h2 class="tm-text-primary tm-section-title mb-4">Question</h2>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
-            In recent years, data analytics has been growing as a method to give us a better understanding of the world
-            in all different sorts of industries. In the world of politics, sentiment analysis has been developing as a
-            branch of data science that allows researchers to observe whether specific statements can be classified as a
-            positive, negative, or neutral statement. One of the most popular areas sentiment analysis has been
-            implemented is Twitter. Twitter is a platform that allows users to freely write about any topic they would
-            like. Sentiment analysis comes into play in various scenarios. For example, a company might want to
-            understand how customers are feeling about a certain product. If Apple was interested in to see how their
-            customers feel about the new iPhone, they could extract tweets contain the hashtag "#iphone", perform a
-            sentiment analysis on each tweet, and determine if the majority is positive, negative, or neutral. In
-            politics, researchers can run a sentiment analysis on tweets posted by presidential candidates to understand
-            the effect the sentiment has on polls or other outcomes. In this study, the goal was to experiment if the
-            same approach of sentiment analysis could be used in reference to news headlines. Do different news sources
-            tend to present specific topics in a consistent sentiment to fit their audience? This study specifically
-            focuses on <b>how news sources differ in their composition of news headlines when publicizing articles
-              specifically about the United States' embassy move from Tel Aviv to Jerusalem. Is it possible to attribute
-              a positive, negative, or neutral sentiment to the headlines designated for this event?</b> In order to
-            explore these questions, 4 different new outlets will be analyzed: The New York Times, Fox News,Mondoweiss,
-            and HonestReporting.
+            In recent years, data analytics has become an increasingly useful tool for researchers from all different
+            disciplines. In the world of politics, a branch of data analytics called sentiment analysis has proven
+            particularly useful for evaluating the overall emotion of any piece of text. Natural language processing
+            (NLP) can classify any product review, news headline, even a tweet as a positive, negative, or neutral
+            statement. In recent years, many companies have employed sentiment analysis on Twitter data sets in order to
+            get a pulse on public opinion. For example, Apple might be interested in evaluating how customers feel about
+            the new iPhone. To do so, they could extract tweets posted that contain the hashtag #iPhone and run a
+            sentiment analysis on the data set to determine whether the majority of the content about the product is
+            positive, negative, or neutral. Similarly, political campaigns could run a sentiment analysis on tweets
+            posted by presidential candidates to determine how each politician's communications style affects polling
+            numbers. Though the possibilities are endless, this study seeks to explore whether the same methodology
+            could be applied to news headlines about the Israeli-Palestinian conflict. Given the complexity of this
+            issue, my research project will focus on local news headlines covering Trump’s recent move of the US Embassy
+            from Tel Aviv to Jerusalem. <b>How is the US Embassy move depicted in American mainstream media? Is it
+              possible to attribute a positive, negative, or neutral sentiment to news headlines connected to this
+              event? Does the sentiment shift depending on the slant of the news source? </b> In order to explore these
+            questions, four different news platforms will be analyzed: The New York Times, Fox News, Mondoweiss, and
+            HonestReporting.
           </p>
           <img src="./img/all.jpg" width="90%" style="margin-bottom: 20px;">
         </div>
@@ -107,18 +107,18 @@
   <section id="hypothesis" class="tm-section-pad-top">
     <div class="container tm-container-gallery">
       <div class="row">
-        <div class="text-center col-12">
+        <div class="text-center">
           <h2 class="tm-text-primary tm-section-title mb-4">Hypothesis</h2>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
-            In order to proceed with the analysis, we must define what is meant by positive, negative, and neutral
-            sentiment in the context of moving the US Embassy from Tel Aviv to Jerusalem. Part of the hypothesis assumes
-            that a positive sentiment in a news headline about this event implies support of the move. This can be for
-            reasons that benefit Israel or the US in any way. On the other hand, a negative sentiment within a headline
-            implies being against the move of the embassy. For example, this can be due to the negative impacts could
-            potentially have for Palestinians in the area. Proceeding with these assumptions, it is hypothesized that
-            right-leaning platforms such as Fox News and HonestReporting will cover the move of the embassy with more
-            positive sentiment, while left-leaning platforms such as The New York Times and Mondoweiss will cover the
-            move with more negative sentiment.
+            In order to proceed with the analysis, we must first define what is meant by a positive, negative, and
+            neutral sentiment in the context of the US Embassy move from Tel Aviv to Jerusalem. This study assumes that
+            a positive sentiment in a news headline about this event implies support of the move. Generally speaking,
+            this position has typically been associated with those who support Israel. On the other hand, a negative
+            sentiment within a headline conveys a lack of support for the move. Most often, this stance has typically
+            been taken by those who support Palestine. With these assumptions in mind, I hypothesize that right-leaning
+            platforms such as Fox News and HonestReporting will cover the move of the embassy with more positive
+            sentiment, while left-leaning platforms such as The New York Times and Mondoweiss will cover the move with
+            more negative sentiment.
           </p>
         </div>
       </div>
@@ -130,26 +130,27 @@
   <section id="methods" class="tm-section-pad-top">
     <div class="container tm-container-gallery">
       <div class="row">
-        <div class="text-center col-12">
+        <div class="text-center">
           <h2 class="tm-text-primary tm-section-title mb-4">Methodology</h2>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
-            Sentiment analysis can be performed in various ways, the most simple of which is called Lexicon-Based
-            Matching. There are 3 mains parts to Lexicon-Based Matching: Data Extraction, Data Cleaning, and Data
-            Processing. In order to complete all parts, Python was used as the main backend software integrated with
-            various APIs and libraries to run the analyses. Once the necessary data processing was completed, excel and
-            R were utilized to visualize the results.
+            Sentiment analysis can be performed in various ways, the most simple of which is called lexicon-based
+            matching. There are three main parts to any lexicon-based matching process: data extraction, data cleaning,
+            and data processing, which will be explained in more detail below. In order to complete all three steps,
+            Python was used as the main backend software. Additionally, various application programming interfaces
+            (APIs) and libraries were used to run my analyses. Once the necessary data processing was completed, excel
+            and R were utilized to visualize the results.
           </p>
           <h5 style="text-decoration: underline;">Data Extraction</h5>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
-            The first step of any data science research is collecting the data that will be analyzed. In the context of
-            this project, we must aim to collect news headlines about the US Embassy move from Tel Aviv to Jerusalem
+            The first step of any data science research project is collecting the data that will be analyzed. In the
+            context of this project, I collected news headlines about the US Embassy move from Tel Aviv to Jerusalem
             from The New York Times, Fox News, Mondoweiss, and HonestReporting. Large platforms such as The New York
-            Times and Fox News provide public APIs that allow developers to extract desired data from these sources with
-            simple software. For this reason, a python wrapper on these APIs allowed for the extraction of around 50
-            headlines from each source that were the most relevant for the query "US Embassy move from Tel Aviv to
-            Jerusalem". Smaller platforms such as Mondoweiss and HonestReporting do not provide such APIs for this
-            reason, the same query was used for these sources, however the most relevant headlines were manually
-            extracted. The data output file for this step had the following structure:
+            Times and Fox News provide public APIs that allow developers to extract any desired data from these sources
+            with simple software. For this reason, I was able to use a Python wrapper to extract approximately 50
+            headlines from each news platform that were most relevant to the query "US Embassy move from Tel Aviv to
+            Jerusalem." Smaller platforms such as Mondoweiss and HonestReporting do not provide such APIs, so the data
+            from these sources were manually extracted using the same query. The data output for this step had the
+            following structure:
           </p>
           <table>
             <tr>
@@ -173,16 +174,17 @@
           <br><br>
           <h5 style="text-decoration: underline;">Data Cleaning</h5>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
-            Lexicon-Based Matching analysis by removing or modifying any irrelevant, duplicated, or incorrect data.
-            Oftentimes when performing sentiment analysis on product reviews are tweets, this step could be very
-            involved for many reasons. For example, if tweets were being used, links, hashtags, mentions, symbols, etc
-            would need to be removed from the text because they do not provide any additional information. However, the
-            data set used in the project are news headlines, implying that they are professionally written and contain
-            only letters, numbers, and punctuation. For this reason, the only significant data cleaning that needs to be
-            done is the removal of what are called stop words. Stop words include determiners, conjunctions and
-            prepositions such as “a”, “for”, “but”, “in”, etc. Following this, in order to avoid any additional errors
-            in the processing section, we will convert every character of every headline to be coded in UTF-8, allowing
-            for data consistency when performing Natural Language Processing for Sentiment Analysis.
+            After compiling the desired headlines following data extraction, these headlines must be prepared for a
+            lexicon-based matching analysis by removing or modifying any irrelevant, duplicated, or incorrect data.
+            Oftentimes this step can become very involved when performing a sentiment analysis on something like product
+            reviews posted on Twitter--if the pieces of text being used contain links, hashtags, mentions, or symbols,
+            this information needs to be removed since they do not provide the analyzer with any additional information.
+            Nonetheless, this is not as much of an issue due to the nature of this study’s data set. Since the content
+            being analysed is professionally written, the news headlines only contain letters, numbers, and punctuation.
+            For this reason, the only significant data cleaning that needs to be performed is the removal of what are
+            called stop words. Stop words include determiners, conjunctions, and prepositions such as “a,” “for,” “but,”
+            “in,” etc. After the data cleaning has been completed, every character in the headline will be coded UTF-8
+            to ensure consistency across the data set and avoid any additional errors later.
 
           <table class="arrowtable">
             <tr class="arrowtable">
@@ -207,37 +209,35 @@
           <h5 style="text-decoration: underline;">Data Processing</h5>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
             Now that the necessary data has been extracted and cleaned, it is ready to undergo the sentiment analysis
-            process. The basics of sentiment analysis can be outlined as a five step process:
+            data processing. The basics of sentiment analysis can be outlined as a five step process:
             <br><br>
             <b><u>Step 1:</u> </b>Tokenize the input into component sentences based on punctuation. This can be
-            completed with
-            a simple string manipulation algorithm that detects spaces and punctuation and divides them accordingly
+            completed with a simple string manipulation algorithm that detects spaces and punctuation and divides them
+            accordingly.
             <br>
             <b><u>Step 2:</u> </b> Tag each token with a part-of-speech using a natural language processing algorithm.
             This can
-            be completed utilizing the NLP algorithms provided by the used library
+            be completed utilizing the NLP algorithms provided by the used library.
             <br>
             <b><u>Step 3:</u> </b>Assign quantitative values to each token by matching them to a word lexicon. Each
-            token will
-            be matched with the corresponding word in a word lexicon. Once each token is matched to a quantitative
-            value, a statistical average will be taken for the overall input
+            token will be matched with the corresponding word in a word lexicon. Once each token is matched to a
+            quantitative value, a statistical average will be taken for the overall input.
             <br>
-            <b><u>Step 4:</u> </b>Output a normalized polarity for the input between -1 and 1. In order to compare
-            results, the
-            averages will be normalized to values between -1 and 1
+            <b><u>Step 4:</u> </b>Output a normalized polarity for the input between -1 and 1.In order to compare
+            results, the averages will be normalized to values between -1 and 1.
             <br>
-            <b><u>Step 5:</u> </b>Map the polarity of each input to a sentiment
-            Any polarity value greater than 0 equates to positive sentiment. Similarly, any polarity value less than 0
-            equates to a negative sentiment. Finally, if the polarity is equal to zero, this implies a neutral
-            sentiment.
+            <b><u>Step 5:</u> </b>Map the polarity of each input to a sentiment. Any polarity value greater than 0
+            equates to positive sentiment. Similarly, any polarity value less than 0 equates to a negative sentiment.
+            Finally, if the polarity is equal to zero, this implies a neutral sentiment.
             <br><br>
-            In order to ensure accuracy of the results, the following 3 natural language processing libraries for
-            sentiment analysis were used: TextBlob, Vader, and SentimentR. Using 3 different libraries allows for the
-            use of 3 different lexicons. In order to make an accurate conclusion, we would expect the results to be
-            similar amongst the 3 libraries. While TextBlob and Vader are NLP libraries written in python, SentimentR is
-            a library written solely for R software. Various data transformation methods were used in order to combine
-            the resulting data processing for all 3 libraries. Once combined, the data is prepared to be analyzed for
-            results. The data output file following this data processing had the following structure:
+            In order to ensure accuracy of the results, the following three natural language processing libraries for
+            sentiment analysis were used: TextBlob, Vader, and SentimentR. Using three different libraries allows for
+            the use of three different lexicons. In order to draw an accurate conclusion, we would expect the results to
+            show a similar pattern across the three libraries. While TextBlob and Vader are NLP libraries written in
+            Python, SentimentR is a library written solely for R software. Various data transformation methods were used
+            in order to combine the resulting data processing for all three libraries. Once combined, the data is
+            prepared to be analyzed for results. The data output file following this data processing had the following
+            structure:
           <table>
             <tr>
               <th>Headline</th>
@@ -271,254 +271,177 @@
   <section id="results" class="tm-section-pad-top">
     <div class="container">
       <div class="row">
-        <div class="text-center col-12">
+        <div class="text-center">
           <h2 class="tm-text-primary tm-section-title mb-4">Results</h2>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
-            In order to analyze if there are observable differences in sentiment between headlines of The New York
-            Times, Fox News, Mondoweiss, and HonestReporting for the US Embassy Move from Tel Aviv to Jerusalem, bar
-            chart visualizations will serve as a prime method of comparing. In each graph, the x-axis will contain the 3
-            various natural language processing libraries that were used for sentiment analysis: TextBlob, Vader, and
-            SenimentR. Each of these libraries will contain 3 bars representing positive, negative, or neutral
-            sentiment. The y-axis of these graphs represents the number of articles. The results of this visualization
-            is displayed below:
+            To analyze if there are observable differences in sentiment between headlines from The New York Times, Fox
+            News, Mondoweiss, and HonestReporting on the US Embassy move from Tel Aviv to Jerusalem, bar graph
+            visualizations were used to compare results across news platforms. In each graph, the x-axis contains the
+            three different natural language processing libraries that were used for sentiment analysis: TextBlob,
+            Vader, and SentimentR. Each of these three libraries contains three bars representing positive, negative, or
+            neutral sentiment. The y-axis of these graphs represents the number of articles. The results of this data
+            visualization are displayed below:
           </p>
         </div>
       </div>
 
-      <!-- <div class="row tm-section-pad-top">
-        <div class="col-lg-4">
-          <img src="./img/nyt_graph.png" style="width: 100%;">
-          <h4 class="text-center tm-text-primary mb-4">Curabitur at elit eu risus</h4>
-          <p>
-            Sed ultrices sit amet mi eu malesuada. Cras ultricies gravida
-            nisi, ac pellentesque nunc tincidunt quis. Aenean at ornare lacus.
-            Duis imperdiet lacus justo.
-          </p>
-        </div>
-
-        <div class="col-lg-4 mt-5 mt-lg-0">
-          <img src="./img/nyt_graph.png" style="width: 100%;">
-          <h4 class="text-center tm-text-primary mb-4">Nunc sed metus vel nisi</h4>
-          <p>
-            Praesent ut finibus leo. Duis et tempus ipsum, id pretium nunc.
-            Vivamus imperdiet sem quis orci pharetra convallis. Nunc a tempus
-            nisi, sed fringilla purus. In hac habitasse platea.
-          </p>
-        </div>
-        <div class="col-lg-4 mt-5 mt-lg-0">
-          <img src="./img/nyt_graph.png" style="width: 100%;">
-          <h4 class="text-center tm-text-primary mb-4">Fusce sed nisi sagittis</h4>
-          <p>
-            Donec vestibulum libero nisl. Curabitur ac orci ac lorem blandit
-            volutpat. Sed ac sodales nibh, ut porttitor elit. Sed id dui mi.
-            Vestibulum ante ipsum primis in faucibus.
-          </p>
-        </div>
-      </div> -->
-
       <div class="row tm-section-pad-top">
         <!-- NYT -->
         <div class="col-lg-6">
-          <!-- <i class="fas fa-4x fa-bus text-center tm-icon"></i> -->
           <img src="./img/nyt_title.png" style="width: 100%;">
           <img src="./img/nyt_graph2.png" style="width: 90%;">
-          <!-- <h4 class="text-center tm-text-primary mb-4">Curabitur at elit eu risus</h4>
-          <p>
-            Sed ultrices sit amet mi eu malesuada. Cras ultricies gravida
-            nisi, ac pellentesque nunc tincidunt quis. Aenean at ornare lacus.
-            Duis imperdiet lacus justo.
-          </p> -->
         </div>
 
         <!--FOX-->
         <div class="col-lg-6 ">
-          <!-- <i class="fas fa-4x fa-city text-center tm-icon"></i> -->
           <img src="./img/fox_title.png" style="width: 100%;">
           <img src="./img/fox_graph2.png" style="width: 90%;">
-          <!-- <h4 class="text-center tm-text-primary mb-4">Fusce sed nisi sagittis</h4>
-          <p>
-            Donec vestibulum libero nisl. Curabitur ac orci ac lorem blandit
-            volutpat. Sed ac sodales nibh, ut porttitor elit. Sed id dui mi.
-            Vestibulum ante ipsum primis in faucibus.
-          </p> -->
         </div>
       </div>
 
       <div class="row tm-section-pad-top">
         <!--MOND-->
         <div class="col-lg-6">
-          <!-- <i class="fas fa-4x fa-bus text-center tm-icon"></i> -->
           <img src="./img/mond_title.png" style="width: 100%;">
           <img src="./img/mond_graph2.png" style="width: 100%;">
-          <!-- <h4 class="text-center tm-text-primary mb-4">Curabitur at elit eu risus</h4>
-          <p>
-            Sed ultrices sit amet mi eu malesuada. Cras ultricies gravida
-            nisi, ac pellentesque nunc tincidunt quis. Aenean at ornare lacus.
-            Duis imperdiet lacus justo.
-          </p> -->
         </div>
 
         <!--HONREP-->
         <div class="col-lg-6 ">
-          <!-- <i class="fas fa-4x fa-city text-center tm-icon"></i> -->
           <img src="./img/honrep_title.jpg" width="100%">
           <img src="./img/honrep_graph2.png" style="width: 100%;">
-          <!-- <h4 class="text-center tm-text-primary mb-4">Fusce sed nisi sagittis</h4>
-          <p>
-            Donec vestibulum libero nisl. Curabitur ac orci ac lorem blandit
-            volutpat. Sed ac sodales nibh, ut porttitor elit. Sed id dui mi.
-            Vestibulum ante ipsum primis in faucibus.
-          </p> -->
         </div>
       </div>
+
+      <p class="mx-auto tm-work-description" style="text-align: justify;">
+        Although these graphs reveal some insight, a very significant inconsistency is visible between the three
+        sentiment analysis libraries across all four sources. Looking at The New York Times, while TextBlob and Vader
+        analyses revealed a predominantly neutral sentiment, the SentimentR library primarily recorded positive and
+        negative sentiment. Similarly for Fox News, TextBlob and Vader again counted more neutral headlines than
+        positive or negative, however, running SentimentR on the same data set counted more negative headlines
+        compared
+        to neutral or positive. The variation between the three possible sentiments are even more amplified when we
+        look
+        at Mondoweiss and HonestReporting. For Mondoweiss, TextBlob recorded only 1 negative article, while SentimentR
+        recorded 8. Along the same lines, TextBlob recorded only 2 negative headlines for HonestReporting, yet
+        SentimentR recorded 7. In addition, Vader recorded 0 positive articles for HonestReporting while both TextBlob
+        and Sentiment recorded at 2 each.
+
+        Because of these inconsistent results, manually observing the processed data would allow for better
+        understanding of these bar graph visualizations. To do so, we stack the results of the processed data from all
+        four sources into a single file. We will now compare the sentiment column between the three different
+        libraries.
+        By filtering out the headlines that had the same sentiment between all three libraries, we will be able to
+        observe the headlines that are causing the differences across TextBlob, Vader, and SenimentR. Two notable
+        headlines were as follows:
+      </p>
+
+      <table>
+        <tr>
+          <th>Headline</th>
+          <th>Source</th>
+          <th>TextBlob</th>
+          <th>Vader</th>
+          <th>SentimentR</th>
+        </tr>
+        <tr>
+          <td>
+            <div style="font-style: italic">
+              Anyone who says Jerusalem embassy move was painless doesn't think Gazans are human beings
+            </div>
+          </td>
+          <td>
+            <div style="font-style: italic;">Mondoweiss</div>
+          </td>
+          <td>
+            <div style="font-style: italic;">neutral</div>
+          </td>
+          <td>
+            <div style="font-style: italic;">positive</div>
+          </td>
+          <td>
+            <div style="font-style: italic;">negative</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="font-style: italic">
+              Killings in Gaza, New Embassy in Jerusalem, and Peace as Distant as Ever
+            </div>
+          </td>
+          <td>
+            <div style="font-style: italic;">NYT</div>
+          </td>
+          <td>
+            <div style="font-style: italic;">positive</div>
+          </td>
+          <td>
+            <div style="font-style: italic;">negative</div>
+          </td>
+          <td>
+            <div style="font-style: italic;">positive</div>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <p class="mx-auto tm-work-description" style="text-align: justify;">
+        With these examples, it is obvious that the Mondoweiss article has a negative tone to it. Yet, the only
+        sentiment
+        analysis that marked it as negative was SentimentR. Furthermore, the other two libraries did not mark it
+        consistently either--TextBlob marked the headline neutral, while Vader marked the headline positive. However,
+        the
+        second example listed illustrates the imperfections of the results from the SentimentR library. After reading
+        “Killings in Gaza, New Embassy in Jerusalem, and Peace as Distant as Ever,” it becomes clear that the tone of
+        this
+        piece of text is obviously negative. Although Vader correctly marked the headline positive in this case,
+        TextBlob
+        and SentimentR both marked it negative.
+
+        As I continued to conduct further analysis, it became apparent why a lexicon-based matching method can return
+        inconsistent results when isolated from the rest of the text surrounding it and lose context. For instance, the
+        Mondoweiss article uses the word “painless.” Out of context, the word “painless” can be thought of as something
+        positive. However, in this specific headline, the word “painless” is being used hypothetically and carries a
+        negative connotation. Similarly, the word “peace” is used in The New York Times article. While the word “peace”
+        is
+        typically thought of as a positive term, the phrase “peace as distant as ever” is quite negative.
+        All in all, a lexicon-based matching model ultimately does not provide a strong enough method for
+        differentiating
+        the sentiment between news headlines for the reasons stated above. That being said, ____________.
+      </p>
   </section>
 
-  <section id="intro" class="tm-section-pad-top">
+  <hr style="width:30%; border: 1px solid #3496d8; border-radius: 5px;">
+
+  <section id="conclusion" class="tm-section-pad-top">
     <div class="container tm-container-gallery">
       <div class="row">
-        <div class="text-center col-12">
-          <h2 class="tm-text-primary tm-section-title mb-4">Our Work</h2>
-          <p class="mx-auto tm-work-description">
-            "Curabitur ac orci ac lorem blandit volutpat. Sed ac sodales nibh, ut
-            porttitor elit. Sed id dui mi. Vestibulum ante ipsum primis in faucibus
-            orci luctus et ultrices posuere cubilia."
+        <div class="text-center">
+          <h2 class="tm-text-primary tm-section-title mb-4">Future Studies</h2>
+          <p class="mx-auto tm-work-description" style="text-align: justify;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
           </p>
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="work" class="tm-section-pad-top">
-    <div class="container tm-container-gallery">
-      <div class="row">
-        <div class="text-center col-12">
-          <h2 class="tm-text-primary tm-section-title mb-4">Our Work</h2>
-          <p class="mx-auto tm-work-description">
-            "Curabitur ac orci ac lorem blandit volutpat. Sed ac sodales nibh, ut
-            porttitor elit. Sed id dui mi. Vestibulum ante ipsum primis in faucibus
-            orci luctus et ultrices posuere cubilia."
-          </p>
-        </div>
-      </div>
-      <!-- <div class="row">
-            <div class="col-12">
-                <div class="mx-auto tm-gallery-container">
-                    <div class="grid tm-gallery">
-                      <a href="img/gallery-img-01.jpg">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="img/gallery-tn-01.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Dreamy <span>Honey</span> Now</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="img/gallery-img-02.jpg">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="img/gallery-tn-02.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Second <span>Honey</span> Now</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="img/gallery-img-03.jpg">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="img/gallery-tn-03.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Third <span>Honey</span> Now</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="img/gallery-img-04.jpg">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="img/gallery-tn-04.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Dreamy <span>Honey</span> Now</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="img/gallery-img-05.jpg">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="img/gallery-tn-05.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Fifth <span>Honey</span> Now</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="img/gallery-img-06.jpg">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="img/gallery-tn-06.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Sixth <span>Honey</span> Now</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="img/gallery-img-01.jpg">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="img/gallery-tn-01.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Dreamy <span>Honey</span> Now</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="img/gallery-img-02.jpg">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="img/gallery-tn-02.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Eighth <span>Honey</span> Now</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                </div>                
-            </div>        
-          </div>
-      </div> -->
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="tm-section-pad-top tm-parallax-2">
-    <div class="container tm-container-contact">
+  <section id="contact" class="tm-section-pad-top" style="margin-top: 100px;">
+    <div class="container">
       <div class="row">
-        <div class="col-12">
-          <h2 class="mb-4 tm-section-title">Contact Us</h2>
-          <div class="mb-5 tm-underline">
-            <div class="tm-underline-inner"></div>
-          </div>
-          <p class="mb-5">
-            Nullam tincidunt, lacus a suscipit luctus, elit turpis tincidunt dui,
-            non tempus sem turpis vitae lorem. Maecenas eget odio in sapien ultrices
-            viverra vitae vel leo. Curabitur at elit eu risus pharetra pellentesque
-            at at velit.
+        <div>
+          <p class="mb-5" style="color: #343e49;">
+            <b>All source code can be found here: </b><a target="_blank"
+              style="font-style: italic; color: black; text-decoration: underline;"
+              href="https://github.com/Denizhan-Yigitbas/Israel-Palestine-Media-Sentiment-Analysis">Link</a>
           </p>
-        </div>
-
-        <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-          <a href="tel:0100200340" class="tm-contact-item-link">
-            <i class="fas fa-3x fa-phone mr-4"></i>
-            <span class="mb-0">010-020-0340</span>
-          </a>
-        </div>
-        <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-          <a href="mailto:info@company.co" class="tm-contact-item-link">
-            <i class="fas fa-3x fa-envelope mr-4"></i>
-            <span class="mb-0">info@company.co</span>
-          </a>
-        </div>
-        <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-          <a href="https://www.google.com/maps" class="tm-contact-item-link">
-            <i class="fas fa-3x fa-map-marker-alt mr-4"></i>
-            <span class="mb-0">Location on Maps</span>
-          </a>
-        </div>
-        <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-          <form action="" method="get">
-            <input name="email" type="email" placeholder="Subscribe your email" class="tm-input" required />
-            <button type="submit" class="btn tm-btn-submit">Submit</button>
-          </form>
         </div>
       </div>
     </div>
-
   </section>
 
 
@@ -559,7 +482,7 @@
       multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
       multiplier = 1 - multiplier;
       var $doc = $(document);
-      // $object.css({"background-attatchment" : "fixed"});
+      // $object.css({ "background-attatchment": "fixed" });
 
       if (forceSet) {
         setParallaxPosition($doc, multiplier, $object);

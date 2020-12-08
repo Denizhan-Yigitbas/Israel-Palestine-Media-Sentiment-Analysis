@@ -38,7 +38,7 @@ a:focus {
 }
 
 .tm-section-pad-top {
-  padding-top: 68px;
+  padding-top: 70px;
 }
 
 .tm-text-primary {
@@ -430,13 +430,15 @@ figure.effect-honey:hover h2 i {
 
 #contact {
   color: white;
-  background-image: url(../img/the-town-bg-02.jpg);
+  /* background-image: url(../img/the-town-bg-02.jpg); */
+  background-color: #3496d8;
+  opacity: 0.8;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 850px;
+  /* min-height: 850px; */
   position: relative;
-  padding-bottom: 50px;
-  padding-top: 160px;
+  /* padding-bottom: 50px;
+  padding-top: 160px; */
 }
 
 .tm-underline {
@@ -676,3 +678,6 @@ tr.arrowtable:nth-child(even) {
   background-color: white;
 }
 
+.mb-5 {
+  text-align: center;
+}
