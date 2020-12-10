@@ -410,7 +410,19 @@
         closely reveals that this positive and negative binary cannot confidently be drawn in lexicon-based matching.
         This is because a news article can easily lead with a headline that uses multiple negative words yet still
         supports the move of the embassy. Similarly, a news headline can also use very positive words yet still express
-        support for the Palestinian side of the conflict. Given these possibilities, ______.
+        support for the Palestinian side of the conflict. Given these possibilities, it becomes clear that positive,
+        negative, and neutral sentiments cannot exclusively be attributed to either side of the political spectrum
+        regarding the Israeli-Palestinian conflict.
+        <br><br>
+        Finally, more data inspection also revealed that media framing in the context of news headlines is usually
+        subtle due to their limitation in length. It is obvious that a headline cannot exceed a certain word count in
+        order to capture the reader's attention. Therefore, a particular platform’s bias is more often conveyed by the
+        tone of the words rather than the words themselves. For example, an author may choose to put words in quotations
+        to add a hint of sarcasm that a lexicon-based matching algorithm would not detect. An example of this kind of
+        camouflaged critique can be seen in an HonestReporting article titled, “Saeb Ereket ‘Threatens’ Violence Over US
+        Embassy Move.” Without the quotations surrounding “threatens” this headline can be read as quite foreboding, yet
+        the addition of the punctuation marks gives the statement a snarky edge. However, if we were to only match words
+        in the headline to quantitative values, this tone would not be detected.
         <br><br>
         All in all, the results of this study have shown that a lexicon-based model is ultimately not a strong enough
         method to differentiate the sentiment of news headlines due to the analyzer’s inability to understand contextual
@@ -439,9 +451,10 @@
             Therefore, while the sentiment of the headline may simply seem neutral, in reality the article may have a
             significant political slant.
             <br><br>
-            Supervised learning is the machine learning task of learning a function that maps an input to an output
-            based on example input-output pairs. It infers a function from labeled training data consisting of a set of
-            training examples. This method can best be understood using a simple visualization, shown below:
+            Supervised learning is an approach to creating artificial intelligence, where the program is given labeled
+            input data and the expected output results. Given such a training set, the program will learn to classify
+            unknown inputs into their respective categories. This method can best be understood using a simple
+            visualization, shown below:
           </p>
           <img src="./img/supervised.png" style="margin-bottom: 20px;">
           <br>
@@ -451,17 +464,22 @@
             we can simply use this model to predict if each one is either an apple or not an apple.
             <br><br>
             All that needs to be done is to replace the variables in this example. For this research project, our new
-            input data will be a set of articles about a topic (For example, the US Embassy move). Our goal will be to
+            input data will be a set of articles about a topic (for example, the US Embassy move). Our goal will be to
             classify each one as either supporting the move, against the move, or neutral. This gives us two categories
             that are very well defined, as opposed to the positive, negative, or neutral sentiments used in
             lexicon-based matching. We can extract 20% of the article dataset and manually tag them as “supporting,”
             “against,” or “neutral.”
             <br><br>
-            This tagged set will become the training set. can now be used. This is because we can now use this tagged
-            dataset to train a model using a machine learning algorithm. In order to improve accuracy, various machine
-            learning algorithms can be tested such as Support Vector Machines, Neural Networks, etc. Once the model is
-            appropriately trained with time, we will be able to classify the remaining 80% of the data as “supporting”,
-            “against”, or “neutral” in regards to the US Embassy move from Tel Aviv to Jerusalem.
+            This tagged set will become the training set, which can now be used to teach the machine learning model how
+            to classify the other 900 images on its own. In order to improve the model’s accuracy, various machine
+            learning algorithms can be tested such as support vector machines, Neural Networks, etc. Once the model is
+            appropriately trained, it will be able to correctly classify the remaining 80% of the data as “supporting,”
+            “against,” or “neutral” in regards to the US Embassy move from Tel Aviv to Jerusalem.
+            <br><br>
+            Thus, we see that although lexicon-based matching may not have been the ideal approach to analyzing
+            sentiment within news headlines, this study has opened doors into new areas of research that can apply the
+            complexities of machine learning and artificial intelligence to better understand the nuances of media bias
+            in US mainstream media coverage of the Israeli-Palestinian conflict and beyond.
           </p>
         </div>
       </div>
