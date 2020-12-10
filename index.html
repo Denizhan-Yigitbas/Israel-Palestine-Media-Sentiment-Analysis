@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="#question">Question</a>
+              <a class="nav-link tm-nav-link" href="#background">Background</a>
             </li>
             <li class="nav-item">
               <a class="nav-link tm-nav-link" href="#hypothesis">Hypothesis</a>
@@ -44,7 +44,7 @@
               <a class="nav-link tm-nav-link" href="#results">Results</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="#conclusion">Future</a>
+              <a class="nav-link tm-nav-link" href="#future">Future</a>
             </li>
           </ul>
         </div>
@@ -65,17 +65,17 @@
 
     <!-- Downarrow that leads to next section -->
     <div class="tm-next tm-intro-next">
-      <a href="#question" class="text-center tm-down-arrow-link">
+      <a href="#background" class="text-center tm-down-arrow-link">
         <i class="fas fa-3x fa-caret-down tm-down-arrow"></i>
       </a>
     </div>
   </section>
 
-  <section id="question" class="tm-section-pad-top">
+  <section id="background" class="tm-section-pad-top">
     <div class="container tm-container-gallery">
       <div class="row">
         <div class="text-center">
-          <h2 class="tm-text-primary tm-section-title mb-4">Question</h2>
+          <h2 class="tm-text-primary tm-section-title mb-4">Background</h2>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
             In recent years, data analytics has become an increasingly useful tool for researchers from all different
             disciplines. In the world of politics, a branch of data analytics called sentiment analysis has proven
@@ -102,7 +102,7 @@
     </div>
   </section>
 
-  <hr style="width:30%; border: 1px solid #3496d8; border-radius: 5px;">
+  <hr style="width:30%; border: 1px solid #3496d8; border-radius: 5px; margin-top: 20px;">
 
   <section id="hypothesis" class="tm-section-pad-top">
     <div class="container tm-container-gallery">
@@ -125,7 +125,7 @@
     </div>
   </section>
 
-  <hr style="width:30%; border: 1px solid #3496d8; border-radius: 5px;">
+  <hr style="width:30%; border: 1px solid #3496d8; border-radius: 5px; margin-top: 20px;">
 
   <section id="methods" class="tm-section-pad-top">
     <div class="container tm-container-gallery">
@@ -223,7 +223,7 @@
             token will be matched with the corresponding word in a word lexicon. Once each token is matched to a
             quantitative value, a statistical average will be taken for the overall input.
             <br>
-            <b><u>Step 4:</u> </b>Output a normalized polarity for the input between -1 and 1.In order to compare
+            <b><u>Step 4:</u> </b>Output a normalized polarity for the input between -1 and 1. In order to compare
             results, the averages will be normalized to values between -1 and 1.
             <br>
             <b><u>Step 5:</u> </b>Map the polarity of each input to a sentiment. Any polarity value greater than 0
@@ -232,8 +232,11 @@
             <br><br>
             In order to ensure accuracy of the results, the following three natural language processing libraries for
             sentiment analysis were used: TextBlob, Vader, and SentimentR. Using three different libraries allows for
-            the use of three different lexicons. In order to draw an accurate conclusion, we would expect the results to
-            show a similar pattern across the three libraries. While TextBlob and Vader are NLP libraries written in
+            the use of three different lexicons. In addition, each library utlizes their own statistical analyses to
+            assign a polarity to the overall sentence. In order to draw an accurate conclusion, we would expect the
+            results to
+            show a similar pattern across the three libraries regardless. While TextBlob and Vader are NLP libraries
+            written in
             Python, SentimentR is a library written solely for R software. Various data transformation methods were used
             in order to combine the resulting data processing for all three libraries. Once combined, the data is
             prepared to be analyzed for results. The data output file following this data processing had the following
@@ -266,10 +269,10 @@
     </div>
   </section>
 
-  <hr style="width:30%; border: 1px solid #3496d8; border-radius: 5px;">
+  <hr style="width:30%; border: 1px solid #3496d8; border-radius: 5px; margin-top: 20px;">
 
   <section id="results" class="tm-section-pad-top">
-    <div class="container">
+    <div class="container tm-container-gallery">
       <div class="row">
         <div class="text-center">
           <h2 class="tm-text-primary tm-section-title mb-4">Results</h2>
@@ -285,7 +288,7 @@
         </div>
       </div>
 
-      <div class="row tm-section-pad-top">
+      <div class="row" style="padding-top: 20px;">
         <!-- NYT -->
         <div class="col-lg-6">
           <img src="./img/nyt_title.png" style="width: 100%;">
@@ -299,7 +302,7 @@
         </div>
       </div>
 
-      <div class="row tm-section-pad-top">
+      <div class="row" style="padding-top: 20px;">
         <!--MOND-->
         <div class="col-lg-6">
           <img src="./img/mond_title.png" style="width: 100%;">
@@ -318,19 +321,16 @@
         sentiment analysis libraries across all four sources. Looking at The New York Times, while TextBlob and Vader
         analyses revealed a predominantly neutral sentiment, the SentimentR library primarily recorded positive and
         negative sentiment. Similarly for Fox News, TextBlob and Vader again counted more neutral headlines than
-        positive or negative, however, running SentimentR on the same data set counted more negative headlines
-        compared
-        to neutral or positive. The variation between the three possible sentiments are even more amplified when we
-        look
+        positive or negative, however, running SentimentR on the same data set counted more negative headlines compared
+        to neutral or positive. The variation between the three possible sentiments are even more amplified when we look
         at Mondoweiss and HonestReporting. For Mondoweiss, TextBlob recorded only 1 negative article, while SentimentR
         recorded 8. Along the same lines, TextBlob recorded only 2 negative headlines for HonestReporting, yet
         SentimentR recorded 7. In addition, Vader recorded 0 positive articles for HonestReporting while both TextBlob
         and Sentiment recorded at 2 each.
-
+        <br><br>
         Because of these inconsistent results, manually observing the processed data would allow for better
         understanding of these bar graph visualizations. To do so, we stack the results of the processed data from all
-        four sources into a single file. We will now compare the sentiment column between the three different
-        libraries.
+        four sources into a single file. We will now compare the sentiment column between the three different libraries.
         By filtering out the headlines that had the same sentiment between all three libraries, we will be able to
         observe the headlines that are causing the differences across TextBlob, Vader, and SenimentR. Two notable
         headlines were as follows:
@@ -383,46 +383,85 @@
           </td>
         </tr>
       </table>
+
       <br>
       <p class="mx-auto tm-work-description" style="text-align: justify;">
         With these examples, it is obvious that the Mondoweiss article has a negative tone to it. Yet, the only
-        sentiment
-        analysis that marked it as negative was SentimentR. Furthermore, the other two libraries did not mark it
-        consistently either--TextBlob marked the headline neutral, while Vader marked the headline positive. However,
-        the
-        second example listed illustrates the imperfections of the results from the SentimentR library. After reading
-        “Killings in Gaza, New Embassy in Jerusalem, and Peace as Distant as Ever,” it becomes clear that the tone of
-        this
-        piece of text is obviously negative. Although Vader correctly marked the headline positive in this case,
-        TextBlob
-        and SentimentR both marked it negative.
-
-        As I continued to conduct further analysis, it became apparent why a lexicon-based matching method can return
-        inconsistent results when isolated from the rest of the text surrounding it and lose context. For instance, the
-        Mondoweiss article uses the word “painless.” Out of context, the word “painless” can be thought of as something
-        positive. However, in this specific headline, the word “painless” is being used hypothetically and carries a
-        negative connotation. Similarly, the word “peace” is used in The New York Times article. While the word “peace”
-        is
-        typically thought of as a positive term, the phrase “peace as distant as ever” is quite negative.
-        All in all, a lexicon-based matching model ultimately does not provide a strong enough method for
-        differentiating
-        the sentiment between news headlines for the reasons stated above. That being said, ____________.
+        sentiment analysis that marked it as negative was SentimentR. Furthermore, the other two libraries did not mark
+        it consistently either--TextBlob marked the headline neutral, while Vader marked the headline positive. However,
+        the second example listed illustrates the imperfections of the results from the SentimentR library. After
+        reading “Killings in Gaza, New Embassy in Jerusalem, and Peace as Distant as Ever,” it becomes clear that the
+        tone of this piece of text is obviously negative. Although Vader correctly marked the headline positive in this
+        case, TextBlob and SentimentR both marked it negative.
+        <br><br>
+        As I continued to conduct further analysis, it became apparent that a lexicon-based matching method can return
+        inconsistent results when individual words are assigned a value regardless of their context in the sentence. For
+        instance, the Mondoweiss article uses the word “painless.” Out of context, the word “painless” can be thought of
+        as something positive. However, in this specific headline, the word “painless” is being used hypothetically and
+        carries a negative connotation. Similarly, the word “peace” is used in The New York Times article. While the
+        word “peace” is typically thought of as a positive term, the phrase “peace as distant as ever” is quite
+        negative. Therefore, we see that one of the limitations of this kind of study is that words used in headlines
+        often have various contextual meanings that cannot be detected with this method of sentiment analysis.
+        <br><br>
+        Further observing the data visualizations revealed another limitation. The issue stems from an incorrect
+        assumption made in the hypothesis stage of the study--at the start of this research project, I assumed that a
+        positive sentiment in a news headline implies support of moving the US Embassy from Tel Aviv to Jerusalem and a
+        negative sentiment in a headline conveys a lack of support for the move. However, examining this assumption more
+        closely reveals that this positive and negative binary cannot confidently be drawn in lexicon-based matching.
+        This is because a news article can easily lead with a headline that uses multiple negative words yet still
+        supports the move of the embassy. Similarly, a news headline can also use very positive words yet still express
+        support for the Palestinian side of the conflict. Given these possibilities, ______.
+        <br><br>
+        All in all, the results of this study have shown that a lexicon-based model is ultimately not a strong enough
+        method to differentiate the sentiment of news headlines due to the analyzer’s inability to understand contextual
+        meanings and categorical definitions. Nonetheless, both of these issues can be overcome using an alternative
+        approach that employs supervised machine learning and neural networks.
       </p>
+
   </section>
 
-  <hr style="width:30%; border: 1px solid #3496d8; border-radius: 5px;">
+  <hr style="width:30%; border: 1px solid #3496d8; border-radius: 5px; margin-top: 20px;">
 
-  <section id="conclusion" class="tm-section-pad-top">
+  <section id="future" class="tm-section-pad-top">
     <div class="container tm-container-gallery">
       <div class="row">
         <div class="text-center">
           <h2 class="tm-text-primary tm-section-title mb-4">Future Studies</h2>
           <p class="mx-auto tm-work-description" style="text-align: justify;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            Given the inconsistent findings of this study, we can see that applying lexicon-based matching to news
+            headlines can often lead to inconclusive results depending on the NLP library that is being used. That being
+            said, we do have a great opportunity to improve this study using a different approach called supervised
+            learning.
+            <br><br>
+            First of all, one of the changes I would make is transitioning the focus of the study from headlines to full
+            articles. We have noticed that headlines often do not have enough information to draw conclusions about the
+            sentiment, however examining the contents of that same article can make the sentiment much more clear to us.
+            Therefore, while the sentiment of the headline may simply seem neutral, in reality the article may have a
+            significant political slant.
+            <br><br>
+            Supervised learning is the machine learning task of learning a function that maps an input to an output
+            based on example input-output pairs. It infers a function from labeled training data consisting of a set of
+            training examples. This method can best be understood using a simple visualization, shown below:
+          </p>
+          <img src="./img/supervised.png" style="margin-bottom: 20px;">
+          <br>
+          <p class="mx-auto tm-work-description" style="text-align: justify;">
+            Imagine we have a set of 1000 images of fruits. The model can then manually be “trained” with 100 of these
+            images, where each one is marked as either “an apple” or “not an apple.” Now with the remaining 900 images,
+            we can simply use this model to predict if each one is either an apple or not an apple.
+            <br><br>
+            All that needs to be done is to replace the variables in this example. For this research project, our new
+            input data will be a set of articles about a topic (For example, the US Embassy move). Our goal will be to
+            classify each one as either supporting the move, against the move, or neutral. This gives us two categories
+            that are very well defined, as opposed to the positive, negative, or neutral sentiments used in
+            lexicon-based matching. We can extract 20% of the article dataset and manually tag them as “supporting,”
+            “against,” or “neutral.”
+            <br><br>
+            This tagged set will become the training set. can now be used. This is because we can now use this tagged
+            dataset to train a model using a machine learning algorithm. In order to improve accuracy, various machine
+            learning algorithms can be tested such as Support Vector Machines, Neural Networks, etc. Once the model is
+            appropriately trained with time, we will be able to classify the remaining 80% of the data as “supporting”,
+            “against”, or “neutral” in regards to the US Embassy move from Tel Aviv to Jerusalem.
           </p>
         </div>
       </div>
@@ -430,14 +469,19 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="tm-section-pad-top" style="margin-top: 100px;">
-    <div class="container">
-      <div class="row">
+  <section id="contact" class="tm-section-pad-top" style="margin-top: 100px; margin-bottom: 0px;">
+    <div class="container" style="background-color: #3496d8;">
+      <div class="">
         <div>
-          <p class="mb-5" style="color: #343e49;">
+          <p class="" style="color: #343e49; text-align: center; margin-bottom: 0px; padding-bottom: 70px;">
             <b>All source code can be found here: </b><a target="_blank"
               style="font-style: italic; color: black; text-decoration: underline;"
               href="https://github.com/Denizhan-Yigitbas/Israel-Palestine-Media-Sentiment-Analysis">Link</a>
+
+            <br>
+
+            <b>Inspired by: </b><a target="_blank" style="font-style: italic; color: black; text-decoration: underline;"
+              href="https://amiham-singh.github.io/">https://amiham-singh.github.io/</a>
           </p>
         </div>
       </div>
